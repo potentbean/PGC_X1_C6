@@ -1,3 +1,4 @@
+components/arduino
 build/
 sdkconfig
 sdkconfig.old
