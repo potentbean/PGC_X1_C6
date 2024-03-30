@@ -1,4 +1,7 @@
-components/arduino
+components/arduino/
+managed_components/
+.devcontainer/
+.vscode/
 build/
 sdkconfig
 sdkconfig.old
