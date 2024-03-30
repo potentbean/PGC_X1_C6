@@ -5,7 +5,39 @@
 #include "driver/gpio.h"
 
 #define INPUT_PIN 15
-#define LED_PIN 2
+#define LED_PIN 8
+
+kb_lc_cols = [["q","e","r","u","o"],
+              ["w","s","g","h","l"],
+              ["%","d","t","y","i"],
+              ["a","p","^","{","<"],
+              [">","x","v","b","$"],
+              [" ","z","c","n","m"],
+              ["&","^","f","j","k"]]
+
+
+colPins = [14,3,8,9,11]
+rowPins = [15,16,17,18,40,41,39]
+
+// cols = [  # , machine.Pin.PULL_UP),#    # , machine.Pin.PULL_DOWN),
+//     machine.Pin(colPins[0], machine.Pin.IN, machine.Pin.PULL_UP),
+//     machine.Pin(colPins[1], machine.Pin.IN, machine.Pin.PULL_UP),
+//     machine.Pin(colPins[2], machine.Pin.IN, machine.Pin.PULL_UP),
+//     machine.Pin(colPins[3], machine.Pin.IN, machine.Pin.PULL_UP),
+//     machine.Pin(colPins[4], machine.Pin.IN, machine.Pin.PULL_UP)]
+  
+// rows = [
+//     machine.Pin(rowPins[0], machine.Pin.IN),#, machine.Pin.PULL_DOWN),
+//     machine.Pin(rowP
+ins[1], machine.Pin.IN),#, machine.Pin.PULL_DOWN),
+//     machine.Pin(rowPins[2], machine.Pin.IN),#, machine.Pin.PULL_DOWN),
+//     machine.Pin(rowPins[3], machine.Pin.IN),#, machine.Pin.PULL_DOWN),
+//     machine.Pin(rowPins[4], machine.Pin.IN),#, machine.Pin.PULL_DOWN),
+//     machine.Pin(rowPins[5], machine.Pin.IN),#, machine.Pin.PULL_DOWN),
+//     machine.Pin(rowPins[6], machine.Pin.IN)]#, machine.Pin.PULL_DOWN)]
+
+
+
 
 int state = 0;
 xQueueHandle interputQueue;
